@@ -80,7 +80,7 @@ def mask_pluck_results(
 		return result
 
 	field = fields[0]
-	field_name = getattr(field, "alias", None) or getattr(field, "name", None)
+	field_name =getattr(field, "name", None)
 	masked_field = next((f for f in masked_fields if f.fieldname == field_name), None)
 	if not masked_field:
 		return result
